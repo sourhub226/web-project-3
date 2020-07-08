@@ -1,0 +1,214 @@
+/*=============================
+Default Values
+Font: Reef, sans serif
+Colors:
+1. Black Pearl: #1e272e;
+2. Chrome Yellow: #ffa801;
+3. Grey: #777;
+==============================*/
+
+
+/*=============================
+        Basic Setup
+==============================*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face{
+    font-family: Reef;
+    src:url(../fonts/Reef.otf)
+}
+
+body{
+    color: #1e272e;
+    font-family: 'Reef', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+li{
+    list-style: none;
+    display:inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*=============================
+            Header
+==============================*/
+
+header{
+    width: 100%;
+    background-color: #1e272e;
+    box-shadow: 0px 3px 8px #777;
+
+}
+
+.heading-div{
+    max-width: 1400px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-header{
+    color: #ffa801;
+    font-size: 38px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.nav-menu a{
+    color: white;
+    padding: 5px 30px;
+    font-size: 20px;
+    border-right: 1px solid #ffa801;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+    
+}
+
+.nav-menu a:last-child{
+    border: none;
+    padding-right: 0px;
+}
+
+.nav-menu a:hover{
+    color: #ffa801;
+}
+
+/*=============================
+        Header Image
+==============================*/
+.header-image{
+    max-width: 1350px ;
+    margin: 40px auto;
+}
+
+.header-image img{
+   width: 100%;
+}
+
+/*=============================
+        Artist Text
+==============================*/
+.artists-text{
+    
+    display: flex;
+    max-width: 1350px; 
+    margin: 20px auto;
+    justify-content: space-around;
+    border-bottom: 2px solid #777;
+    padding-bottom: 35px;
+    align-items: center;
+    width: 90%;
+}
+
+.artist{
+    margin-right: 50px;
+}
+
+.artist:last-child{
+    margin-right: 0;
+}
+
+.artist-name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 60px;
+}
+
+.shape{
+    width:16px;
+    height: 32px;
+    background-color:#ffa801; 
+    position: relative;
+    margin-right: 30px;
+    
+}
+
+.shape:before{
+    content: "";
+    position: absolute;
+    right: -16px;
+    border-left: 16px solid #ffa801;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    
+}
+
+.artist-name h3{
+    text-transform: uppercase;
+    font-size: 22px;
+    
+}
+
+.artist a{
+    font-size: 18px;
+    color: #ffa801;
+    transition: all 0.3s ease;
+}
+
+.artist a:hover{
+    color: #1e272e;
+}
+
+.artist p{
+    margin-bottom: 10px;
+    text-align:justify;
+}
+
+
+@media (max-width:1000px){
+    .artists-text{
+        display: inherit;
+        columns: 2;
+        padding-bottom: inherit;
+    }
+    .artist{
+        margin-bottom: 30px;
+        margin-right: inherit;
+    }
+    .heading-div{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-menu{
+        padding: inherit;
+    }
+    .nav-menu a:last-child{
+        padding-right: 30px;
+    }
+    .header-image img{
+        overflow: auto;
+        position:inherit;
+    }
+    
+}
+
+@media (max-width:500px){
+    .heading-div{
+        flex-direction: inherit;
+    }
+    .nav-menu a{
+        display: inherit;
+        border-right:none;
+        border-bottom: 1px solid #ffa801;
+    }
+}
+
+@media (max-width:460px){
+    .artists-text{
+        columns: 1;
+    }
+}
