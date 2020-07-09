@@ -300,6 +300,9 @@ footer p{
     .heading-div{
         flex-direction: inherit;
     }
+    .page-header{
+        margin-left: 8px;
+    }
     .nav-menu a{
         display: inherit;
         border-right:none;
@@ -309,6 +312,7 @@ footer p{
         columns: 1;
     }
 }
+
 
 @media (max-width:460px){
     .artists-text{
